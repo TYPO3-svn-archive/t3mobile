@@ -1,0 +1,16 @@
+<div class="content-element-admin-panel">
+	<!-- Default-Content -->
+	[uid:{content.uid} | {content.contentType}]
+	
+	<!-- Mobile-Content -->
+	<f:if condition="{content.mobileOnlyContent}">
+		<!-- Edit record -->
+		<a title="Edit record" onclick="window.location.href='alt_doc.php?returnUrl='+T3_THIS_LOCATION+'&amp;edit[tt_content][{content.uid}]=edit'; return false;" href="#">
+			<span class="t3-icon t3-icon-actions t3-icon-actions-document t3-icon-document-open">&nbsp;</span>
+		</a>
+		<!-- Delete record -->
+		<a title="Delete record (!)" onclick="{jumpToUrl('tce_db.php?&amp;cmd[tt_content][{content.uid}][delete]=1&amp;redirect='+T3_THIS_LOCATION+'');} return false;" href="#">
+			<span class="t3-icon t3-icon-actions t3-icon-actions-edit t3-icon-edit-delete">&nbsp;</span>
+		</a>
+	</f:if>
+</div>

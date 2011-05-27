@@ -1,0 +1,20 @@
+<f:layout name="Smartphone"></f:layout>
+
+<f:section name="Header">
+	<div data-role="controlgroup"  data-type="horizontal" class="t3mobile-navigation-settings">
+   		<a href="http://www.mechanixclub.ch/" data-role="button" data-icon="home" data-iconpos="notext" data-theme="c" data-inline="true" rel="external">Home</a>
+		<a href="http://www.mechanixclub.ch/" data-role="button" data-icon="gear" data-iconpos="notext" data-theme="c" data-inline="true" data-rel="dialog" data-transition="pop">Settings</a>
+	</div>
+    <img src="{imageHeader}" width="100%"/>
+	<h1>{data.title}</h1>	
+	<f:cObject typoscriptObjectPath="lib.t3mobile.navigation.main"></f:cObject>
+</f:section>
+
+<f:section name="Content">
+	<f:cObject typoscriptObjectPath="lib.t3mobile.navigation.sub"></f:cObject>
+	<span class="hyphenate"><f:format.html parseFuncTSPath="">{mobileContent}</f:format.html></span>
+</f:section>
+
+<f:section name="Footer">	
+	<f:cObject typoscriptObjectPath="lib.t3mobile.navigation.footer"></f:cObject>	
+</f:section>

@@ -1,0 +1,44 @@
+/**
+ * Admin-Panel
+ */
+#main-admin-panel {
+    left: 830px;
+}
+
+/**
+ * Layout
+ */
+
+#tx_t3mobile_tablet_admin_background{
+	position: absolute;
+	z-index:1;
+}
+
+#tx_t3mobile_tablet_admin_content{
+    height: 470px;
+    width: 641px;	
+    left: 89px;
+    top: 122px;	
+    position: absolute;
+    z-index: 2;
+	overflow:auto;	
+}
+
+#t3mobile_column_1,
+#t3mobile_column_2,
+#t3mobile_column_3{
+	min-height:50px;	
+	width:312px;
+	border-bottom: 1px dotted #fff;
+}
+
+#t3mobile_column_1{
+	width:100%
+}
+#t3mobile_column_2{
+	border-right: 1px dotted #fff;	
+	margin-right:-1px;
+}
+#t3mobile_column_3{
+	border-left: 1px dotted #fff;	
+}

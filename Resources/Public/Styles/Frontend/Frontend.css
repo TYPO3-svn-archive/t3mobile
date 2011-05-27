@@ -1,0 +1,78 @@
+/**
+ * Layout
+ */
+.ui-bar-a {
+    background:#3C3C3C;
+}
+
+.ui-body-c .ui-link {
+    color: #333333;
+    font-weight:normal;
+}
+
+.ui-header .ui-title, .ui-footer .ui-title {
+	margin: .6em 18px;
+}
+
+/**
+ * Navigation - Settings
+ */
+.t3mobile-navigation-settings{
+	position: absolute;
+	left: 10px;
+}
+
+/**
+ * Content
+ */
+h1,h2,h3,h4,h5{
+	font-size: 130%;
+}
+
+h2{
+	font-size: 120%
+}
+
+h3{
+	font-size: 110%
+}
+
+h4{
+	font-size: 100%
+}
+
+h5{
+	font-size: 100%
+}
+
+p{
+	margin: 0;
+}
+/**
+ * tt_content
+ */
+.tt_content{
+	padding: 10px;
+	background:#fff;
+}
+
+/**
+ * TtNews
+ */
+.news-latest a,
+.news-list a{
+	text-decoration: none;	
+}
+
+.news-latest-content,
+.news-list-content{
+	padding: 10px;
+	font-weight:normal;
+	overflow:hidden;
+}
+
+.news-latest-content img,
+.news-list-content img{
+	float:right;
+	margin-left:5px;
+}

@@ -1,0 +1,27 @@
+plugin.tx_mmforum_pi1.template{
+	main                = EXT:t3mobile/Resources/Private/Extensions/Smartphone/MmForum/forum/main.html
+	header              = EXT:t3mobile/Resources/Private/Extensions/Smartphone/MmForum/forum/header.html
+	list_topic			= EXT:t3mobile/Resources/Private/Extensions/Smartphone/MmForum/forum/list_topic.html
+	list_post			= EXT:t3mobile/Resources/Private/Extensions/Smartphone/MmForum/forum/list_post.html
+	login_error			= EXT:t3mobile/Resources/Private/Extensions/Smartphone/MmForum/forum/login_error.html
+	error				= EXT:t3mobile/Resources/Private/Extensions/Smartphone/MmForum/forum/error.html
+	new_topic			= EXT:t3mobile/Resources/Private/Extensions/Smartphone/MmForum/forum/new_topic.html
+	new_post			= EXT:t3mobile/Resources/Private/Extensions/Smartphone/MmForum/forum/new_post.html
+	send_email			= EXT:t3mobile/Resources/Private/Extensions/Smartphone/MmForum/forum/send_email.html
+	userdetail			= EXT:t3mobile/Resources/Private/Extensions/Smartphone/MmForum/forum/userdetail.html
+	admin_gui			= EXT:t3mobile/Resources/Private/Extensions/Smartphone/MmForum/forum/admin_gui.html
+	post_del			= EXT:t3mobile/Resources/Private/Extensions/Smartphone/MmForum/forum/post_del.html
+	change_userdata		= EXT:t3mobile/Resources/Private/Extensions/Smartphone/MmForum/forum/change_userdata.html
+	new_post_mail		= EXT:t3mobile/Resources/Private/Extensions/Smartphone/MmForum/forum/mail_newpost.html
+	havealook			= EXT:t3mobile/Resources/Private/Extensions/Smartphone/MmForum/forum/havealook.html
+	favorites			= EXT:t3mobile/Resources/Private/Extensions/Smartphone/MmForum/forum/favorites.html
+	search				= EXT:t3mobile/Resources/Private/Extensions/Smartphone/MmForum/forum/search.html
+	userconf			= EXT:t3mobile/Resources/Private/Extensions/Smartphone/MmForum/forum/userconf.html
+	post_alert			= EXT:t3mobile/Resources/Private/Extensions/Smartphone/MmForum/forum/post_alert.html
+	polls               = EXT:t3mobile/Resources/Private/Extensions/Smartphone/MmForum/forum/polls.html
+	latest              = EXT:t3mobile/Resources/Private/Extensions/Smartphone/MmForum/forum/latest.html
+	userlist            = EXT:t3mobile/Resources/Private/Extensions/Smartphone/MmForum/forum/userlist.html
+	postqueue			= EXT:t3mobile/Resources/Private/Extensions/Smartphone/MmForum/forum/postqueue.html
+	rss					= EXT:t3mobile/Resources/Private/Extensions/Smartphone/MmForum/forum/rss.xml
+	footer              = EXT:t3mobile/Resources/Private/Extensions/Smartphone/MmForum/forum/footer.html
+}

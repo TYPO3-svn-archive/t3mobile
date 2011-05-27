@@ -1,0 +1,12 @@
+/**
+ * TtNews
+ */
+
+.tx-ttnews-pi1 .ui-li-desc,
+.tx-ttnews-pi1 .ui-li-heading{
+	white-space: normal;
+}
+
+.tx-ttnews-pi1 .ui-li-thumb{
+	margin-top:20px;
+}

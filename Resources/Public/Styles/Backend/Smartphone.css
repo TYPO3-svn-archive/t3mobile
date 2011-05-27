@@ -1,0 +1,26 @@
+/**
+ * Admin-Panel
+ */
+#main-admin-panel{
+	left: 414px;
+}
+
+/**
+ * Layout
+ */
+
+#tx_t3mobile_smartphone_admin_background{
+	position: absolute;
+}
+
+#tx_t3mobile_smartphone_admin_col1{
+    position: relative;
+    top: 129px;
+	left: 55px;
+	width:305px;	
+}
+
+#t3mobile_colum_1{
+	overflow:auto;
+	height:410px;
+}

@@ -1,0 +1,31 @@
+includeLibs.content_t3mobile = EXT:t3mobile/Classes/Service/T3mobileUserFunctions.php
+
+#Images
+tt_content.image{
+	wrap 		= <div class="gallery">|</div>
+	20{
+		rendering.dl.imageRowStdWrap.dataWrap = <div class="gallery-row">|</div>
+		rendering.dl.oneImageStdWrap.dataWrap = <div class="gallery-item">|</div>
+		renderMethod = dl
+		
+		#Image Wrap
+		1.imageLinkWrap {	
+			typolink {
+				parameter.override.if.isTrue.field 	= image_zoom
+				parameter.override.if.isFalse.field = image_link
+						
+				parameter.override.cObject = IMG_RESOURCE
+				parameter.override.cObject.file.import.data = TSFE:lastImageInfo|origFile
+				parameter.override.cObject.file.maxW = 650
+				parameter.override.cObject.file.maxH = 650			
+				userFunc = tx_t3mobile->touchgallery
+			}
+		}		
+		# http://lists.typo3.org/pipermail/typo3-german/2007-July/036117.html	
+	}
+}
+
+#Links
+styles.content.links {
+  allowTags = dfn,b,i,u,a,img,br,div,center,pre,font,hr,sub,sup,p,strong,em,li,ul,ol,blockquote,strike,del,ins,span,h1,h2,h3,h4,h5,h6,address
+}

@@ -1,0 +1,53 @@
+includeLibs.content_t3mobile = EXT:t3mobile/Classes/Service/T3mobileUserFunctions.php
+
+# -----------------------------------------------------------------------------------------
+# Mainnav
+# -----------------------------------------------------------------------------------------
+lib.t3mobile.navigation.main = HMENU
+lib.t3mobile.navigation.main{
+	entryLevel = 0
+	1 = TMENU
+	1.wrap = <div data-role="navbar"><ul>|</ul></div>
+	1.NO = 1
+	1.NO.wrapItemAndSub = <li>|</li>
+	1.ACT = 1
+	1.ACT < .1.NO
+	1.ACT.doNotLinkIt = 0
+}
+
+# -----------------------------------------------------------------------------------------
+# Subnav
+# -----------------------------------------------------------------------------------------
+
+temp.subNavPid = USER
+temp.subNavPid.userFunc = tx_t3mobile->getsubNavPid
+
+lib.t3mobile.navigation.sub = HMENU
+lib.t3mobile.navigation.sub{
+	special = directory
+	# special.value < temp.subNavPid
+	special.value >
+	1 = TMENU
+	1.wrap = <div><ul data-role="listview">|</ul></div><br/>
+	1.NO = 1
+	1.NO.wrapItemAndSub = <li>|</li>
+	1.ACT = 1
+	1.ACT < .1.NO
+	1.ACT.doNotLinkIt = 0
+}
+
+# -----------------------------------------------------------------------------------------
+# Footernav
+# -----------------------------------------------------------------------------------------
+lib.t3mobile.navigation.footer = HMENU
+lib.t3mobile.navigation.footer{
+	special = directory
+	special.value = 71
+	1 = TMENU
+	1.wrap = <div data-role="navbar"><ul>|</ul></div>
+	1.NO = 1
+	1.NO.wrapItemAndSub = <li>|</li>
+	1.ACT = 1
+	1.ACT < .1.NO
+	1.ACT.doNotLinkIt = 0
+}

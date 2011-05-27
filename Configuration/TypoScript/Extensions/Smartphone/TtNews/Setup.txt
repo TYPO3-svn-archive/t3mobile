@@ -1,0 +1,20 @@
+plugin.tt_news {
+	templateFile = EXT:t3mobile/Resources/Private/Extensions/Smartphone/TtNews/Template.html
+	
+	# LIST
+	displayList.image {
+  	  	file.maxW = 105
+  	  	file.maxH >
+  	}	
+  	
+	# LATEST
+	displayLatest.image {
+  	  	file.maxW = 105
+  	  	file.maxH >
+  	}	
+  	
+  	displaySingle.image {
+    	file.maxW = 270
+    	file.maxH >
+    }
+}

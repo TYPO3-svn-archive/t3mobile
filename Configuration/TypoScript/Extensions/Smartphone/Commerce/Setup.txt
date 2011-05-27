@@ -1,0 +1,35 @@
+plugin.tx_commerce_pi1 {
+	# cat=plugin.commerce: Display/file/1; type=file[html,htm,tmpl,txt]; label= Template File: HTML-template for display the products and categories
+	templateFile = EXT:t3mobile/Resources/Private/Extensions/Smartphone/Commerce/pi1/category_product.tpl
+}
+
+plugin.tx_commerce_pi2 {
+	# cat=plugin.commerce: Basket/file/1; type=file[html,htm,tmpl,txt]; label= Template File: HTML-template for display the shopping cart
+	templateFile = EXT:t3mobile/Resources/Private/Extensions/Smartphone/Commerce/pi2/shoppingcart.tpl	
+}
+		
+plugin.tx_commerce_pi3 {
+	# cat=plugin.commerce: Checkout/file/10; type=file[html,htm,tmpl,txt]; label= Template File: HTML-template for display the checkout
+	templateFile = EXT:t3mobile/Resources/Private/Extensions/Smartphone/Commerce/pi3/template_checkout.tpl
+	
+	# cat=plugin.commerce: Checkout/file/15; type=file[html,htm,tmpl,txt]; label= Template File: HTML-template for the email that is send to the user after checking out
+	UserMailTemplateFile =  EXT:t3mobile/Resources/Private/Extensions/Smartphone/Commerce/pi3/template_usermail.tpl
+	
+	# cat=plugin.commerce: Checkout/file/20; type=file[html,htm,tmpl,txt]; label= Template File: HTML-template for the email that is send to the administrator after checking out
+	AdminMailTemplateFile =  EXT:t3mobile/Resources/Private/Extensions/Smartphone/Commerce/pi3/template_adminmail.tpl
+	
+	# cat=plugin.commerce: Checkout/file/25; type=file[html,htm,tmpl,txt]; label= Template File: HTML-template for the email that is send to the user after checking out in HTML Format
+	UserMailTemplateFileHtml =  EXT:t3mobile/Resources/Private/Extensions/Smartphone/Commerce/pi3/template_usermail_html.tpl
+
+	# cat=plugin.commerce: Checkout/file/30; type=file[html,htm,tmpl,txt]; label= Template File: HTML-template for the email that is send to the administrator after checking out in HTML Format
+	AdminMailTemplateFileHtml =  EXT:t3mobile/Resources/Private/Extensions/Smartphone/Commerce/pi3/template_adminmail_html.tpl	
+}
+
+plugin.tx_commerce_pi4 {
+	# cat=plugin.commerce: Address Management/file/1; type=file[html,htm,tmpl,txt]; label= Template File: HTML-template for display the address manager
+	templateFile = EXT:t3mobile/Resources/Private/Extensions/Smartphone/Commerce/pi4/template_addresses.tpl
+}
+
+plugin.tx_commerce_pi6 {
+	templateFile = EXT:t3mobile/Resources/Private/Extensions/Smartphone/Commerce/pi6/invoice.tpl
+}

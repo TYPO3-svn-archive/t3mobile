@@ -1,0 +1,32 @@
+# -----------------------------------------------------------------------------------------
+# config
+# -----------------------------------------------------------------------------------------
+
+t3mobilePage.config {
+	baseURL 				= {$tx_t3mobile.settings.config.baseURL}  
+	language 				= {$tx_t3mobile.settings.config.language} 
+	locale_all 				= {$tx_t3mobile.settings.config.locale_all}
+	doctype 				= {$tx_t3mobile.settings.config.doctype}
+	xmlprologue 			= {$tx_t3mobile.settings.config.xmlprologue}
+	xml_cleaning			= {$tx_t3mobile.settings.config.xml_cleaning}
+	metaCharset 			= {$tx_t3mobile.settings.config.metaCharset}
+	renderCharset 			= {$tx_t3mobile.settings.config.renderCharset}
+	htmlTag_langKey 		= {$tx_t3mobile.settings.config.htmlTag_langKey}
+	
+	uniqueLinkVars			= {$tx_t3mobile.settings.config.uniqueLinkVars}
+	linkVars 				= {$tx_t3mobile.settings.config.linkVars.L}, {$tx_t3mobile.settings.config.linkVars.t3mobile}
+	sys_language_uid 		= {$tx_t3mobile.settings.config.sys_language_uid}
+	
+	# URL
+	tx_realurl_enable       = {$tx_t3mobile.settings.config.tx_realurl_enable}
+	simulateStaticDocuments = {$tx_t3mobile.settings.config.simulateStaticDocuments}
+	absRefPrefix 			= {$tx_t3mobile.settings.config.baseURL}
+	
+	# Cache
+	sendCacheHEaders 		= {$tx_t3mobile.settings.config.sendCacheHEaders}
+	cache_period 			= {$tx_t3mobile.settings.config.cache_period}
+	no_cache 				= {$tx_t3mobile.settings.config.no_cache}
+	cache 					= {$tx_t3mobile.settings.config.cache}
+
+	headerComment			= This mobile website is based on "t3mobile" from GreenBanana GmbH (www.greenbanana.ch) Switzerland.
+}

@@ -1,0 +1,39 @@
+# -----------------------------------------------------------------------------------------
+# Language configuration
+# -----------------------------------------------------------------------------------------
+tx_t3mobile{
+	settings{
+		config{
+			language 					= de
+			locale_all 					= de_DE
+			htmlTag_langKey 			= de-DE	 
+			sys_language_uid 			= 0
+		}
+	}
+} 		
+
+[globalVar = GP:L = 1]
+tx_t3mobile{
+	settings{
+		config{
+			language 					= fr
+			locale_all 					= fr_FR	
+			htmlTag_langKey 			= fr-FR
+			sys_language_uid 			= 1
+		}
+	}
+}
+
+[globalVar = GP:L = 2]
+tx_t3mobile{
+	settings{
+		config{
+			language 					= en
+			locale_all 					= en_EN
+			htmlTag_langKey 			= en-EN
+			sys_language_uid 			= 2
+		}
+	}
+}
+
+[END]

@@ -1,0 +1,94 @@
+# -----------------------------------------------------------------------------------------
+# Smartphone - PAGE
+# -----------------------------------------------------------------------------------------
+
+page >
+t3mobilePage = PAGE
+
+t3mobilePage{
+	headerData {
+		10 = TEXT
+		10.value = <meta name="viewport" content="width=device-width, initial-scale=1">
+	}
+	
+	includeCSS.t3mobile01			= {$tx_t3mobile.settings.file.path.jquery.mobile.css}
+	includeCSS.t3mobile01.external 	= {$tx_t3mobile.settings.file.host.external.jquery.mobile.css}
+	includeCSS.t3mobile02			= {$tx_t3mobile.settings.file.path.Frontend.css}
+	includeCSS.t3mobile03			= {$tx_t3mobile.settings.file.path.Smartphone.css}
+	includeCSS.t3mobile04			= {$tx_t3mobile.settings.file.path.Smartphone.css}
+	includeCSS.t3mobile05			= {$tx_t3mobile.settings.file.path.extensions.smartphone.TtNews.css}
+	includeCSS.t3mobile06			= {$tx_t3mobile.settings.file.path.extensions.tablet.TtNews.css}
+	includeCSS.t3mobile07			= {$tx_t3mobile.settings.file.path.extensions.smartphone.MmForum.css}
+	includeCSS.t3mobile08			= {$tx_t3mobile.settings.file.path.extensions.tablet.MmForum.css}
+	includeCSS.t3mobile09			= {$tx_t3mobile.settings.file.path.extensions.smartphone.Commerce.css}
+	includeCSS.t3mobile10			= {$tx_t3mobile.settings.file.path.extensions.tablet.Commerce.css}		
+	includeJS.t3mobile01 			= {$tx_t3mobile.settings.file.path.jquery.js}
+	includeJS.t3mobile01.external 	= {$tx_t3mobile.settings.file.host.external.jquery.js}
+	includeJS.t3mobile02 			= {$tx_t3mobile.settings.file.path.Frontend.js}	
+	includeJS.t3mobile03 			= {$tx_t3mobile.settings.file.path.jquery.mobile.js}
+	includeJS.t3mobile03.external 	= {$tx_t3mobile.settings.file.host.external.jquery.mobile.js}
+	
+	# Hyphenator - Silbentrennung
+	includeJS.t3mobile04    = {$tx_t3mobile.settings.file.path.hyphenator.js}
+	includeJS.t3mobile05    = {$tx_t3mobile.settings.file.path.jquery.hyphenator.js}
+	
+	# Mobile Gallery
+	includeJS.t3mobile06    = {$tx_t3mobile.settings.file.path.jquery.PhotoSwipe.simple-inheritance.min.js}
+	includeJS.t3mobile07    = {$tx_t3mobile.settings.file.path.jquery.PhotoSwipe.animate-enhanced.min.js}
+	includeJS.t3mobile08    = {$tx_t3mobile.settings.file.path.jquery.PhotoSwipe.code-photoswipe.js}
+}
+
+t3mobilePage.10 = FLUIDTEMPLATE
+t3mobilePage.10{
+	file					= {$tx_t3mobile.view.page.Smartphone.file}
+	layoutRootPath 			= {$tx_t3mobile.view.page.Smartphone.layoutRootPath}
+	partialRootPath 		= {$tx_t3mobile.view.page.Smartphone.partialRootPath}
+		
+	variables{
+
+		# Generated content for smartphones
+		mobileContent 		< tt_content.list.20.t3mobile_smartphone
+		
+		imageHeader 		= COA
+		imageHeader{
+			10 = TEXT
+			10.value = {$tx_t3mobile.settings.config.baseURL}
+		
+			20 = IMG_RESOURCE
+			20{
+	   			file = GIFBUILDER
+	   			file {
+	     			XY = 400,135
+	     			
+	     			10 = IMAGE
+	     			10.file.import = uploads/media/
+	     			10.file.import.data = levelmedia: -1, slide
+				    10.file.import.listNum = 0
+				    10.file.width = 400
+				    10.offset = 0,0			    
+	   			}
+	   		}
+	   	}
+	   	
+		imageLogo 	= COA
+		imageLogo{
+			10 = TEXT
+			10.value = {$tx_t3mobile.settings.config.baseURL}
+		
+			20 = IMG_RESOURCE
+			20{
+	   			file = GIFBUILDER
+	   			file {
+	     			XY = 120,60
+					backColor = #dddddd
+					
+     				10 = IMAGE
+     				10.file = fileadmin/templates/images/logo/logo.png
+		    		10.file.width = 100		    
+					10.offset = 10,10				    
+	   			}
+	   		}
+	   	}	   	
+	   	
+	}	
+}

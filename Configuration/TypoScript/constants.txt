@@ -1,0 +1,155 @@
+# -----------------------------------------------------------------------------------------
+# General configuration
+# -----------------------------------------------------------------------------------------
+tx_t3mobile{
+	
+	persistence {
+		storagePid = 6
+	}
+	
+	settings{
+		file.host.external{
+			jquery.mobile.css			= 1
+			jquery.js					= 1
+			jquery.mobile.js			= 1
+		}
+		file.path{
+			#CSS
+			jquery.mobile.css 			= http://code.jquery.com/mobile/1.0a4.1/jquery.mobile-1.0a4.1.min.css
+			Frontend.css				= EXT:t3mobile/Resources/Public/Styles/Frontend/Frontend.css
+			Smartphone.css				= EXT:t3mobile/Resources/Public/Styles/Frontend/Smartphone.css
+			Tablet.css					= EXT:t3mobile/Resources/Public/Styles/Frontend/Tablet.css
+			
+			extensions{
+				smartphone{
+					TtNews.css			= EXT:t3mobile/Resources/Public/Styles/Frontend/Extensions/Smartphone/TtNews/Style.css
+					MmForum.css			= EXT:t3mobile/Resources/Public/Styles/Frontend/Extensions/Smartphone/MmForum/Style.css
+					Commerce.css		= EXT:t3mobile/Resources/Public/Styles/Frontend/Extensions/Smartphone/Commerce/Style.css
+				}
+				
+				tablet{
+					TtNews.css			= EXT:t3mobile/Resources/Public/Styles/Frontend/Extensions/Tablet/TtNews/Style.css
+					MmForum.css			= EXT:t3mobile/Resources/Public/Styles/Frontend/Extensions/Tablet/MmForum/Style.css
+					Commerce.css		= EXT:t3mobile/Resources/Public/Styles/Frontend/Extensions/Tablet/Commerce/Style.css
+				}
+			}
+			
+			#JavaScript
+			jquery.mobile.js 			= http://code.jquery.com/mobile/1.0a4.1/jquery.mobile-1.0a4.1.min.js
+			jquery.js					= http://code.jquery.com/jquery-1.6.1.min.js
+			Frontend.js					= EXT:t3mobile/Resources/Public/Javascripts/Frontend.js
+			
+			#Hyphenator - Silbentrennung
+			jquery.hyphenator.js		= EXT:t3mobile/Resources/Public/Frameworks/jquery.hyphenator/1.1.0/jquery.hyphenator.min.js
+			hyphenator.js				= EXT:t3mobile/Resources/Public/Frameworks/jquery.hyphenator/1.1.0/hyphenator/hyphenator.min.js
+			
+			#Mobile Gallery
+			jquery.PhotoSwipe{
+				simple-inheritance.min.js 	= EXT:t3mobile/Resources/Public/Frameworks/jquery.PhotoSwipe/1.0.8/lib/simple-inheritance.min.js
+				animate-enhanced.min.js		= EXT:t3mobile/Resources/Public/Frameworks/jquery.PhotoSwipe/1.0.8/lib/jquery.animate-enhanced.min.js
+				code-photoswipe.js			= EXT:t3mobile/Resources/Public/Frameworks/jquery.PhotoSwipe/1.0.8/code-photoswipe-jQuery-1.0.8.min.js
+			}
+			
+			# ----------------------------------------------------------------------------------------------------------------------
+			# LOCAL-Files 				(If the local files are used: Set "settings.file.host.external.FILENAME" to 0)
+			# ----------------------------------------------------------------------------------------------------------------------
+			#jquery.mobile.css 			= EXT:t3mobile/Resources/Public/Frameworks/jquery.mobile/1.0a4.1/jquery.mobile-1.0a4.min.css
+			#jquery.mobile.js			= EXT:t3mobile/Resources/Public/Frameworks/jquery.mobile/1.0a4.1/jquery.mobile-1.0a4.min.js
+			#jquery.js 					= EXT:t3mobile/Resources/Public/Frameworks/jquery/1.5.2/jquery-1.5.1.min.js
+			
+			#PHP
+			WURFL{
+				configFile 				= test.txt
+				includeFile 			= test2.txt 
+			}
+		}
+		config{
+			baseURL 					= {$plugin.tx_grbbase.settings.site.baseUrl}
+			doctype 					= html_5
+			xmlprologue 				= none
+			xml_cleaning				= all
+			metaCharset 				= utf-8
+			renderCharset 				= utf-8 
+			
+			uniqueLinkVars				= 1
+			linkVars.L 					= L 
+			linkVars.t3mobile			= t3mobile
+			sys_language_uid 			= 0 
+			
+			# URL
+			tx_realurl_enable       	= 0
+			simulateStaticDocuments 	= 0	
+			
+			# Cache		
+			sendCacheHEaders			= 1
+			cache_period				= 43200
+			no_cache					= 0
+			cache						= 1
+		} 
+	}
+	
+	view{
+		plugin{
+			templateRootPath 			= EXT:t3mobile/Resources/Private/Frontend/Templates/
+			partialRootPath 			= EXT:t3mobile/Resources/Private/Frontend/Partials/
+			layoutRootPath 				= EXT:t3mobile/Resources/Private/Frontend/Layouts/
+		}
+		
+		module{
+			templateRootPath 			= EXT:t3mobile/Resources/Private/Backend/Templates/
+			partialRootPath 			= EXT:t3mobile/Resources/Private/Backend/Partials/
+			layoutRootPath 				= EXT:t3mobile/Resources/Private/Backend/Layouts/			
+		}
+		page{
+			Smartphone{
+				inUse					= 1
+				file					= EXT:t3mobile/Resources/Private/Page/Template/Smartphone.html
+				layoutRootPath 			= EXT:t3mobile/Resources/Private/Page/Layouts/
+				partialRootPath 		= EXT:t3mobile/Resources/Private/Page/Partials/			
+			}
+			Tablet{
+				inUse					= 1
+				file					= EXT:t3mobile/Resources/Private/Page/Template/Tablet.html
+				layoutRootPath 			= EXT:t3mobile/Resources/Private/Page/Layouts/
+				partialRootPath 		= EXT:t3mobile/Resources/Private/Page/Partials/			
+			}
+		}
+	}	
+}
+
+#Language-Config
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:t3mobile/Configuration/TypoScript/Config.Language/Constants.txt">
+
+# -----------------------------------------------------------------------------------------
+# Smartphone configuration
+# -----------------------------------------------------------------------------------------
+[userFunc = user_t3mobile(isSmartphoneDevice)] OR [globalVar = GP:t3mobile = Smartphone]
+	#tt_news
+	<INCLUDE_TYPOSCRIPT: source="FILE:EXT:t3mobile/Configuration/TypoScript/Extensions/Smartphone/TtNews/Constants.txt">
+
+	#commerce
+	<INCLUDE_TYPOSCRIPT: source="FILE:EXT:t3mobile/Configuration/TypoScript/Extensions/Smartphone/Commerce/Constants.txt">	
+
+	#mm_forum
+	<INCLUDE_TYPOSCRIPT: source="FILE:EXT:t3mobile/Configuration/TypoScript/Extensions/Smartphone/MmForum/Constants.txt">	
+
+	#tt_content
+	<INCLUDE_TYPOSCRIPT: source="FILE:EXT:t3mobile/Configuration/TypoScript/Content/Constants.txt">
+[END]
+
+# -----------------------------------------------------------------------------------------
+# Tablet configuration
+# -----------------------------------------------------------------------------------------
+[userFunc = user_t3mobile(isTabletDevice)] OR [globalVar = GP:t3mobile = Tablet]
+	#tt_news
+	<INCLUDE_TYPOSCRIPT: source="FILE:EXT:t3mobile/Configuration/TypoScript/Extensions/Smartphone/TtNews/Constants.txt">
+	
+	#commerce
+	<INCLUDE_TYPOSCRIPT: source="FILE:EXT:t3mobile/Configuration/TypoScript/Extensions/Smartphone/Commerce/Constants.txt">		
+
+	#mm_forum
+	<INCLUDE_TYPOSCRIPT: source="FILE:EXT:t3mobile/Configuration/TypoScript/Extensions/Smartphone/MmForum/Constants.txt">	
+	
+	#tt_content
+	<INCLUDE_TYPOSCRIPT: source="FILE:EXT:t3mobile/Configuration/TypoScript/Content/Constants.txt">
+[END]

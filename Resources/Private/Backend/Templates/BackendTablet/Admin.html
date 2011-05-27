@@ -1,0 +1,33 @@
+<f:layout name="Tablet" />
+
+<f:section name="Headline">
+    <h2>Content Manager for Tablets</h2>
+</f:section>
+
+<f:section name="AdminPanel">
+    <f:render partial="MainAdminPanel" arguments="{hiddenContents:tabletContentsColumn0}"></f:render>
+</f:section>
+
+<f:section name="Column1">
+    <div id="tx_t3mobile_tablet_admin_column_1">
+        <div class="column" id="t3mobile_column_1">
+            <f:render partial="ContentElement" arguments="{contentsColumn:tabletContentsColumn1}"></f:render>
+        </div>
+    </div>
+</f:section>
+
+<f:section name="Column2">
+    <div id="tx_t3mobile_tablet_admin_column_2">
+        <div class="column" id="t3mobile_column_2">
+            <f:render partial="ContentElement" arguments="{contentsColumn:tabletContentsColumn2}"></f:render>
+        </div>
+    </div>
+</f:section>
+
+<f:section name="Column3">
+    <div id="tx_t3mobile_tablet_admin_column_3">
+        <div class="column" id="t3mobile_column_3">
+            <f:render partial="ContentElement" arguments="{contentsColumn:tabletContentsColumn3}"></f:render>
+        </div>
+    </div>
+</f:section>

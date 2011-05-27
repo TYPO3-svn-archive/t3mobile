@@ -1,0 +1,37 @@
+# -----------------------------------------------------------------------------------------
+# Tablet - PAGE
+# -----------------------------------------------------------------------------------------
+
+page >
+t3mobilePage = PAGE
+
+t3mobilePage{
+	includeCSS.t3mobile01			= {$tx_t3mobile.settings.file.path.jquery.mobile.css}
+	includeCSS.t3mobile01.external 	= {$tx_t3mobile.settings.file.host.external.jquery.mobile.css}
+	includeCSS.t3mobile02			= {$tx_t3mobile.settings.file.path.Frontend.css}
+	includeCSS.t3mobile03			= {$tx_t3mobile.settings.file.path.Tablet.css}
+	includeJS.t3mobile01 			= {$tx_t3mobile.settings.file.path.jquery.js}
+	includeJS.t3mobile01.external 	= {$tx_t3mobile.settings.file.host.external.jquery.js}
+	includeJS.t3mobile02 			= {$tx_t3mobile.settings.file.path.Frontend.js}	
+	includeJS.t3mobile03 			= {$tx_t3mobile.settings.file.path.jquery.mobile.js}
+	includeJS.t3mobile03.external 	= {$tx_t3mobile.settings.file.host.external.jquery.mobile.js}
+	
+	# Hyphenator - Silbentrennung
+	includeJS.t3mobile04    = {$tx_t3mobile.settings.file.path.hyphenator.js}
+	includeJS.t3mobile05    = {$tx_t3mobile.settings.file.path.jquery.hyphenator.js}
+	
+	# Mobile Gallery
+	includeJS.t3mobile06    = {$tx_t3mobile.settings.file.path.jquery.touch-gallery.js}
+}
+
+t3mobilePage.10 = FLUIDTEMPLATE
+t3mobilePage.10{
+	file					= {$tx_t3mobile.view.page.Tablet.file}
+	layoutRootPath 			= {$tx_t3mobile.view.page.Tablet.layoutRootPath}
+	partialRootPath 		= {$tx_t3mobile.view.page.Tablet.partialRootPath}
+		
+	variables{
+		# Generated content for tablets
+		mobileContent 		< tt_content.list.20.t3mobile_tablet
+	}	
+}

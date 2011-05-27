@@ -1,0 +1,32 @@
+<div id="main-admin-panel">
+	<div class="main-admin-panel-item">
+		<div class="main-admin-panel-headline"> 
+			<f:link.action action="syncSmartphoneSortingWithDefaultSorting" controller="SmartphoneContent" arguments="{redirectAction:'list'}">
+				<span class="t3-icon t3-icon-status t3-icon-status-version t3-icon-version-no-version">&nbsp;</span>
+				Sync sorting with default Website!
+			</f:link.action>
+		</div>
+	</div>
+	<div class="main-admin-panel-item">
+		<div class="main-admin-panel-headline"> 
+        	<a title="New record" onclick="window.location.href='alt_doc.php?returnUrl='+T3_THIS_LOCATION+'&amp;edit[tt_content][{pageUid}]=new'; return false;" href="#">
+        		<span class="t3-icon t3-icon-actions t3-icon-actions-document t3-icon-document-new">&nbsp;</span>
+				New Content Element (mobile only)
+			</a>
+		</div>
+	</div>	
+    <div class="main-admin-panel-item">
+		<div class="main-admin-panel-headline">    
+			<span class="t3-icon t3-icon-actions t3-icon-actions-edit t3-icon-edit-unhide">&nbsp;</span>
+			Hidden Elements on Smartphones
+		</div>
+		<div class="main-admin-panel-divider"></div>
+		<div class="main-admin-panel-content">
+	        <div class="column" id="t3mobile_colum_9999">
+	        	<f:render partial="ContentElement" arguments="{contentsColumn:hiddenContents}"></f:render>
+	        </div>
+		</div>
+    </div>
+		         
+	<f:flashMessages renderMode="div" />
+</div>

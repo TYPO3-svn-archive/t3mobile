@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PhpProjectConfiguration">
+    <sdk>
+      <PhpSdkConfig home="">
+        <include_paths>
+          <path value="$PROJECT_DIR$/../t3-4.5LTS/t3lib" />
+          <path value="$PROJECT_DIR$/../t3-4.5LTS/typo3" />
+        </include_paths>
+      </PhpSdkConfig>
+    </sdk>
+  </component>
+</project>
+

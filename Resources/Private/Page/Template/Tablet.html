@@ -1,0 +1,18 @@
+<f:layout name="Tablet"></f:layout>
+
+<f:section name="Header"><h1>{data.title}</h1></f:section>
+
+<f:section name="Content">
+    <div class="ui-grid-a">
+        <div class="ui-block-a t3mobile-page-ui-block-a">
+            <f:cObject typoscriptObjectPath="lib.t3mobile.navigation.main"></f:cObject>
+        </div>
+        <div class="ui-block-b t3mobile-page-ui-block-b">
+            <f:format.html parseFuncTSPath="">{mobileContent}</f:format.html>
+        </div>
+    </div>
+</f:section>
+
+<f:section name="Footer">
+	<h2>Tablet-Footer</h2>
+</f:section>

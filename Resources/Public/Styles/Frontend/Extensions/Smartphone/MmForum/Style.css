@@ -1,0 +1,70 @@
+/**
+ * MmForum
+ */
+
+
+/**
+ * Content
+ */
+
+.t3mobile-mm_forum-content,
+.tx-mmforum-pi1 .ui-li-desc{
+	font-weight: normal;
+	font-size: 14px;	
+}
+
+/**
+ * Table
+ */
+.tx-mmforum-pi1 table,
+.tx-mmforum-pi1 table th,
+.tx-mmforum-pi1 table td{
+	border: none;
+}
+
+
+/* TOPICBEGIN */
+.tx-mmforum-pi1 ul.topicbegin li{
+	padding-left: 60px;
+}
+
+.tx-mmforum-pi1 ul.topicbegin{
+	margin-bottom:10px;
+}
+
+.tx-mmforum-pi1 ul.topicbegin li img{
+	margin:15px;	
+}
+
+.tx-mmforum-pi1 ul.topicbegin li a:hover,
+.tx-mmforum-pi1 ul.topicbegin li a:active{
+	font-weight: bold;
+}
+
+/**
+ * list_post.html
+ */
+.t3mobile-mm_forum-list_post-list-postinfo{
+	background: #fff;
+	border-top: 1px solid #333;
+}
+
+.t3mobile-mm_forum-list_post-list-post{
+	background: #F0F0F0 ;
+	border: none;
+}
+
+.tx-mmforum-pi1 .ui-li-desc{
+	white-space: normal;
+}
+
+.tx-mmforum-pi1 .ui-li .ui-btn-inner a.ui-link-inherit, .ui-li-static.ui-li {
+	padding: .7em 15px;
+}
+
+.tx-mmforum-pi1-pt-quote{
+	boder: 1px solid #333;
+	padding: 10px;
+	margin: 10px 5px 5px 5px;
+	background: #fff;
+}

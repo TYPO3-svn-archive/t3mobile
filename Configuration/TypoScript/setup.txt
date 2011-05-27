@@ -1,0 +1,85 @@
+# -----------------------------------------------------------------------------------------
+# Plugin configuration
+# -----------------------------------------------------------------------------------------
+plugin.tx_t3mobile {
+	view { 
+		templateRootPath 	= {$tx_t3mobile.view.plugin.templateRootPath}
+		partialRootPath 	= {$tx_t3mobile.view.plugin.partialRootPath}
+		layoutRootPath 		= {$tx_t3mobile.view.plugin.layoutRootPath}
+	}
+	persistence {
+		storagePid 			= {$tx_t3mobile.persistence.storagePid}
+	}
+}
+
+
+# -----------------------------------------------------------------------------------------
+# Module configuration
+# -----------------------------------------------------------------------------------------
+module.tx_t3mobile {
+	view {
+		templateRootPath 	= {$tx_t3mobile.view.module.templateRootPath}
+		partialRootPath 	= {$tx_t3mobile.view.module.partialRootPath}
+		layoutRootPath 		= {$tx_t3mobile.view.module.layoutRootPath}
+	}
+	persistence {
+		storagePid 			= {$tx_t3mobile.persistence.storagePid}
+	}	
+}
+
+#Extbase-Config
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:t3mobile/Configuration/TypoScript/Config.TxExtbase/Setup.txt">
+
+#Mobile-Navigation
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:t3mobile/Configuration/TypoScript/Navigation/Smartphone/Setup.txt">
+	
+# -----------------------------------------------------------------------------------------
+# Smartphone configuration
+# -----------------------------------------------------------------------------------------
+[userFunc = user_t3mobile(isSmartphoneDevice)] OR [globalVar = GP:t3mobile = Smartphone]
+	#page
+	<INCLUDE_TYPOSCRIPT: source="FILE:EXT:t3mobile/Configuration/TypoScript/Page/Smartphone/Setup.txt">
+
+	#tt_content
+	<INCLUDE_TYPOSCRIPT: source="FILE:EXT:t3mobile/Configuration/TypoScript/Content/Setup.txt">
+	
+	#config
+	<INCLUDE_TYPOSCRIPT: source="FILE:EXT:t3mobile/Configuration/TypoScript/Config/Setup.txt">
+	<INCLUDE_TYPOSCRIPT: source="FILE:EXT:t3mobile/Configuration/TypoScript/Config.TxExtbase/Setup.txt">
+	
+	#tt_news
+	<INCLUDE_TYPOSCRIPT: source="FILE:EXT:t3mobile/Configuration/TypoScript/Extensions/Smartphone/TtNews/Setup.txt">
+	
+	#commerce
+	<INCLUDE_TYPOSCRIPT: source="FILE:EXT:t3mobile/Configuration/TypoScript/Extensions/Smartphone/Commerce/Setup.txt">
+	
+	#mm_forum
+	<INCLUDE_TYPOSCRIPT: source="FILE:EXT:t3mobile/Configuration/TypoScript/Extensions/Smartphone/MmForum/Setup.txt">
+[END]
+
+# -----------------------------------------------------------------------------------------
+# Tablet configuration
+# -----------------------------------------------------------------------------------------
+[userFunc = user_t3mobile(isTabletDevice)] OR [globalVar = GP:t3mobile = Tablet]
+	#page
+	<INCLUDE_TYPOSCRIPT: source="FILE:EXT:t3mobile/Configuration/TypoScript/Page/Tablet/Setup.txt">
+
+	#config
+	<INCLUDE_TYPOSCRIPT: source="FILE:EXT:t3mobile/Configuration/TypoScript/Config/Setup.txt">
+	<INCLUDE_TYPOSCRIPT: source="FILE:EXT:t3mobile/Configuration/TypoScript/Config.TxExtbase/Setup.txt">
+	
+	#tt_content
+	<INCLUDE_TYPOSCRIPT: source="FILE:EXT:t3mobile/Configuration/TypoScript/Content/Setup.txt">
+		
+	#navigation
+	<INCLUDE_TYPOSCRIPT: source="FILE:EXT:t3mobile/Configuration/TypoScript/Navigation/Tablet/Setup.txt">
+	
+	#tt_news
+	<INCLUDE_TYPOSCRIPT: source="FILE:EXT:t3mobile/Configuration/TypoScript/Extensions/Smartphone/TtNews/Setup.txt">
+	
+	#commerce
+	<INCLUDE_TYPOSCRIPT: source="FILE:EXT:t3mobile/Configuration/TypoScript/Extensions/Smartphone/Commerce/Setup.txt">
+	
+	#mm_forum
+	<INCLUDE_TYPOSCRIPT: source="FILE:EXT:t3mobile/Configuration/TypoScript/Extensions/Smartphone/MmForum/Setup.txt">
+[END]

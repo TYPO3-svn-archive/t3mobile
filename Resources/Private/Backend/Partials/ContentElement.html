@@ -1,0 +1,20 @@
+<f:for each="{contentsColumn}" as="content">
+	<div class="portlet" id="TxT3mobileModule%5Bcontent%5D_{content.uid}">
+		<div class="portlet-header">
+			<f:format.html>{content.header}</f:format.html>
+		</div>
+		<div class="portlet-content">
+			<f:format.crop maxCharacters="250" append="&nbsp;[...]"><f:format.html>{content.bodytext}</f:format.html></f:format.crop>
+			
+			<!-- Images -->
+			<f:for each="{content.image}" as="image">
+				<f:if condition="{image}">
+					<f:image src="uploads/pics/{image}" width="60" alt="{image}" />
+				</f:if>
+			</f:for>
+			
+			<!-- Admin-Panel -->
+			<f:render partial="ContentElementAdminPanel" arguments="{content:content}"></f:render>
+		</div>
+	</div>
+</f:for>

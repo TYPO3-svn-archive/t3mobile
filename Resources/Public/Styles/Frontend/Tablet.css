@@ -1,0 +1,14 @@
+/**
+ * Layout
+ */
+
+/* Navigation Column */
+.ui-grid-a .t3mobile-page-ui-block-a{
+    width: 33%;
+}
+
+/* Content Column */
+.ui-grid-a .t3mobile-page-ui-block-b{
+	width: 64%;
+	margin-left:2%
+}

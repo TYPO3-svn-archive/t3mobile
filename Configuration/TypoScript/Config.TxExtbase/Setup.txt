@@ -1,0 +1,106 @@
+# -----------------------------------------------------------------------------------------
+# Extbase configuration
+# -----------------------------------------------------------------------------------------
+
+config.tx_extbase {
+    persistence{
+        enableAutomaticCacheClearing = 1
+        updateReferenceIndex = 0
+        classes {
+			Tx_T3Mobile_Models_Domain_Model_Content {
+        		mapping {
+            		tableName = tt_content
+					columns {
+							# db-field tt_content   						= db-field domain-model
+							# ---------------------------------------------------------------------
+                        	CType.mapOnProperty 							= contentType                        	
+                        	header.mapOnProperty 							= header
+                        	header_position.mapOnProperty 					= headerPosition
+                        	bodytext.mapOnProperty 							= bodytext
+                        	image.mapOnProperty 							= image
+                        	imagewidth.mapOnProperty 						= imageWidth
+                        	imageorientation.mapOnProperty 					= imageOrientation
+                        	imagecaption.mapOnProperty 						= imageCaption
+                        	imagecolumns.mapOnProperty 						= imageColumns
+                        	imageborder.mapOnProperty 						= imageBorder
+                        	media.mapOnProperty 							= media
+                        	cols.mapOnProperty 								= layout
+                        	records.mapOnProperty 							= records
+                        	pages.mapOnProperty 							= pages
+                        	starttime.mapOnProperty 						= startTime
+                        	endtime.mapOnProperty 							= endTime
+                        	colPos.mapOnProperty 							= columnPosition
+                        	subheader.mapOnProperty 						= subheader
+                        	list_type.mapOnProperty 						= listType
+                        	tx_t3mobile_smartphone_sorting.mapOnProperty	= smartphoneSorting
+                        	tx_t3mobile_smartphone_column.mapOnProperty		= smartphoneColumn
+                        	tx_t3mobile_tablet_sorting.mapOnProperty		= tabletSorting
+                        	tx_t3mobile_tablet_column.mapOnProperty			= tabletColumn                        	
+                    }
+        		}
+    		}
+    		
+    		Tx_T3mobile_Domain_Model_SmartphoneContent{
+        		mapping {
+            		tableName = tt_content
+					columns {
+							# db-field tt_content   						= db-field domain-model
+							# ---------------------------------------------------------------------
+                        	CType.mapOnProperty 							= contentType                        	
+                        	header.mapOnProperty 							= header
+                        	header_position.mapOnProperty 					= headerPosition
+                        	bodytext.mapOnProperty 							= bodytext
+                        	image.mapOnProperty 							= image
+                        	imagewidth.mapOnProperty 						= imageWidth
+                        	imageorientation.mapOnProperty 					= imageOrientation
+                        	imagecaption.mapOnProperty 						= imageCaption
+                        	imagecolumns.mapOnProperty 						= imageColumns
+                        	imageborder.mapOnProperty 						= imageBorder
+                        	media.mapOnProperty 							= media
+                        	cols.mapOnProperty 								= layout
+                        	records.mapOnProperty 							= records
+                        	pages.mapOnProperty 							= pages
+                        	starttime.mapOnProperty 						= startTime
+                        	endtime.mapOnProperty 							= endTime
+                        	colPos.mapOnProperty 							= columnPosition
+                        	subheader.mapOnProperty 						= subheader
+                        	list_type.mapOnProperty 						= listType
+                        	tx_t3mobile_smartphone_sorting.mapOnProperty	= smartphoneSorting
+                        	tx_t3mobile_smartphone_column.mapOnProperty		= smartphoneColumn
+                    }
+        		}
+    		}
+    		    		
+    		Tx_T3mobile_Domain_Model_TabletContent{
+        		mapping {
+            		tableName = tt_content
+					columns {
+							# db-field tt_content   						= db-field domain-model
+							# --------------------------------------------------------------------
+                        	CType.mapOnProperty 							= contentType                        	
+                        	header.mapOnProperty 							= header
+                        	header_position.mapOnProperty 					= headerPosition
+                        	bodytext.mapOnProperty 							= bodytext
+                        	image.mapOnProperty 							= image
+                        	imagewidth.mapOnProperty 						= imageWidth
+                        	imageorientation.mapOnProperty 					= imageOrientation
+                        	imagecaption.mapOnProperty 						= imageCaption
+                        	imagecolumns.mapOnProperty 						= imageColumns
+                        	imageborder.mapOnProperty 						= imageBorder
+                        	media.mapOnProperty 							= media
+                        	cols.mapOnProperty 								= layout
+                        	records.mapOnProperty 							= records
+                        	pages.mapOnProperty 							= pages
+                        	starttime.mapOnProperty 						= startTime
+                        	endtime.mapOnProperty 							= endTime
+                        	colPos.mapOnProperty 							= columnPosition
+                        	subheader.mapOnProperty 						= subheader
+                        	list_type.mapOnProperty 						= listType
+                        	tx_t3mobile_tablet_sorting.mapOnProperty		= tabletSorting
+                        	tx_t3mobile_tablet_column.mapOnProperty			= tabletColumn
+                    }
+        		}
+    		}    		
+        }
+    }
+}
